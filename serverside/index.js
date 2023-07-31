@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const { cache } = require("ejs");
 const auth = require("./auth");
 
 bodyParser = require("body-parser");
@@ -14,7 +13,7 @@ dotenv.config();
 app.use(cors(
   {
     origin : ["https://project-listing-api.vercel.app/"],
-    methods:["POST","GET","PUT"],
+    methods:["POST","GET"],
     credentials : true
   } 
 ));
