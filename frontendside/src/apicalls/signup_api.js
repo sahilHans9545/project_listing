@@ -5,7 +5,7 @@ export const RegisterUser = (e, name, password, email, mobileNumber) => {
   e.preventDefault();
   return axios({
     method: "post",
-    url: "https://project-listing-api.vercel.app/signup",
+    url: "https://project-listing-backend-v0lp.onrender.com/signup",
     data: {
       name: name,
       email: email,
