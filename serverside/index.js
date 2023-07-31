@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   res.json({
-    msg: "Success is the only option",
+    message: "Success is the only option",
   });
 });
 
