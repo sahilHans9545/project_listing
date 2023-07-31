@@ -58,9 +58,12 @@ function Homepage() {
 
   const getProducts = () => {
     axios
-      .post(`https://project-listing-api.vercel.app/getproducts/${sortBy.toLowerCase()}`, {
-        selectedCategories: selectedCategories,
-      })
+      .post(
+        `https://project-listing-api.vercel.app/getproducts/${sortBy.toLowerCase()}`,
+        {
+          selectedCategories: selectedCategories,
+        }
+      )
       .then((response) => {
         console.log(response.status);
         if (response.status === 201) {
@@ -272,7 +275,6 @@ function Homepage() {
             <p>Filters:</p>
             <div className="filters">
               <span
-<<<<<<< HEAD
                 className={
                   selectedCategories.includes("All") ? "activeFilter" : ""
                 }
@@ -291,26 +293,6 @@ function Homepage() {
                   {category}
                 </span>
               ))}
-=======
-              className={
-                selectedCategories.includes("All") ? "activeFilter" : ""
-              }
-              onClick={(e) => handleFilterClick(e, "All")}
-            >
-              All
-            </span>
-            {filterOptions.map((category) => (
-              <span
-                key={category}
-                className={
-                  selectedCategories.includes(category) ? "activeFilter" : ""
-                }
-                onClick={(e) => handleFilterClick(e, category)}
-              >
-                {category}
-              </span>
-            ))}
->>>>>>> 5f7e09fc1fb393249040b20a9abbc57c01edbdb1
             </div>
           </div>
           <div className="Projects">
