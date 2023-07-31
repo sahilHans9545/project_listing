@@ -58,7 +58,7 @@ function Homepage() {
 
   const getProducts = () => {
     axios
-      .post(`http://localhost:5000/getproducts/${sortBy.toLowerCase()}`, {
+      .post(`https://project-listing-api.vercel.app/getproducts/${sortBy.toLowerCase()}`, {
         selectedCategories: selectedCategories,
       })
       .then((response) => {
@@ -87,7 +87,7 @@ function Homepage() {
     try {
       const result = await axios({
         method: "put",
-        url: `http://localhost:5000/addcomment/${productId}`,
+        url: `https://project-listing-api.vercel.app/addcomment/${productId}`,
         data: {
           comment: text.value,
         },
@@ -116,7 +116,7 @@ function Homepage() {
     try {
       await axios({
         method: "put",
-        url: `http://localhost:5000/incrementupvotes/${productId}`,
+        url: `https://project-listing-api.vercel.app/incrementupvotes/${productId}`,
       });
 
       let productsDummy = products;
