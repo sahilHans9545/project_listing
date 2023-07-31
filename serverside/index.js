@@ -10,15 +10,14 @@ bodyParser = require("body-parser");
 const app = express();
 
 
-// app.use(cors(
-//   {
-//     origin: ["https://project-listing-site.vercel.app"],
-//     methods:["POST","GET","PUT"],
-//     credentials : true
-//   } 
-// ));
+app.use(cors(
+  {
+    origin: ["https://project-listing-site.vercel.app"],
+    methods:["POST","GET","PUT"],
+    credentials : true
+  } 
+));
 
-app.use(cors());
 dotenv.config();
 app.use(express.json());
 app.use(bodyParser.json());
@@ -145,10 +144,7 @@ app.post("/signup", bodyParser.json(), async (req, res) => {
   }
 });
 
-// private applyFilter
-app.get("/private", auth, (req, res) => {
-  res.status(201).json({ msg: "Right code" });
-});
+
 
 // **** login ******
 
@@ -240,7 +236,7 @@ app.put("/editproduct/:id", auth, async (req, res) => {
     return res.status(500).json({ message: "Something went wrong !" });
   }
 });
-
+   
 // get products
 app.post("/getproducts/:sortBy", bodyParser.json(), async (req, res) => {
   try {
