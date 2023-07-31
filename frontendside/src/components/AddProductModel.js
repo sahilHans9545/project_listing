@@ -14,7 +14,7 @@ function AddProductModel(props) {
       const getProduct = () => {
         axios
           .get(
-            `http://localhost:5000/getproduct/${props.editDetails.productId}`
+            `https://project-listing-api.vercel.app/getproduct/${props.editDetails.productId}`
           )
           .then((response) => {
             console.log(response.status);
@@ -38,7 +38,7 @@ function AddProductModel(props) {
     // console.log("first ", token);
     await axios({
       method: "post",
-      url: "http://localhost:5000/addproduct",
+      url: "https://project-listing-api.vercel.app/addproduct",
       headers: {
         Authorization: `Bearer ${authToken}`, // Include the token in the 'Authorization' header
       },
@@ -71,7 +71,7 @@ function AddProductModel(props) {
     const authToken = JSON.parse(localStorage.getItem("userData")).authToken;
     await axios({
       method: "put",
-      url: `http://localhost:5000/editproduct/${props.editDetails.productId}`,
+      url: `https://project-listing-api.vercel.app/editproduct/${props.editDetails.productId}`,
       headers: {
         Authorization: `Bearer ${authToken}`, // Include the token in the 'Authorization' header
       },
