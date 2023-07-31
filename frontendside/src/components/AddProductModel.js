@@ -17,7 +17,7 @@ function AddProductModel(props) {
             `https://project-listing-backend-v0lp.onrender.com/getproduct/${props.editDetails.productId}`
           )
           .then((response) => {
-            console.log(response.status);
+            // console.log(response.status);
             if (response.status === 201) {
               console.log("response is ", response);
               setCompanyName(response.data.product.companyName);
@@ -35,7 +35,7 @@ function AddProductModel(props) {
   const addProduct = async (e) => {
     e.preventDefault();
     const authToken = JSON.parse(localStorage.getItem("userData")).authToken;
-    // console.log("first ", token);
+    // console.log("token ", token);
     await axios({
       method: "post",
       url: "https://project-listing-backend-v0lp.onrender.com/addproduct",
@@ -84,7 +84,7 @@ function AddProductModel(props) {
       },
     })
       .then((msg) => {
-        console.log(msg);
+        // console.log(msg);
         alert("Product Updated Succesfully");
         props.editDetails.setEditDetails({ edit: false, productId: "" });
         props.editDetails.setShowModal(false);

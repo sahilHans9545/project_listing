@@ -26,8 +26,6 @@ app.get("/", (req, res) => {
   });
 });
 
-// const SECRET_KEY = "uiyiouyewrt";
-
 const user = mongoose.model("user", {
   name: {
     type: String,
@@ -78,11 +76,11 @@ const product = mongoose.model("product", {
   },
 });
 
-// user Registration
+// *** user Registration  ***
 app.post("/signup", bodyParser.json(), async (req, res) => {
   const { name, email, mobile, password } = req.body;
 
-  // Check username constraints (e.g., alphanumeric characters only)
+  // name validation
   var usernameRegex = /^[a-zA-Z0-9]+$/;
   if (!usernameRegex.test(name)) {
     return res
@@ -90,7 +88,7 @@ app.post("/signup", bodyParser.json(), async (req, res) => {
       .json({ message: "Username must contain only alphanumeric characters." });
   }
 
-  // Mobile number pattern (10 digits)
+  // 10 digit mobile number
   var mobileRegex = /^\d{10}$/;
   if (!mobileRegex.test(mobile)) {
     return res
@@ -98,13 +96,13 @@ app.post("/signup", bodyParser.json(), async (req, res) => {
       .json({ message: "Invalid mobile number. It should be 10 digits." });
   }
 
-  // Check email format using regular expression
+  //  email format validation
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ message: "Invalid email format." });
   }
 
-  // Check password minimum length
+  // password minimum length validation
   if (password.length < 5) {
     return res
       .status(400)
@@ -147,13 +145,13 @@ app.post("/login", bodyParser.json(), async (req, res) => {
   console.log(process.env.SECRET_KEY);
   const { email, password } = req.body;
 
-  // Check email format using regular expression
+  // //  email format validation
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ message: "Invalid email format." });
   }
 
-  // Check password minimum length
+  // password minimum length validation
   if (password.length < 5) {
     return res
       .status(400)
@@ -193,7 +191,7 @@ app.post("/login", bodyParser.json(), async (req, res) => {
 app.post("/addproduct", auth, async (req, res) => {
   let { companyName, categories, description, logoUrl, productLink } = req.body;
   console.log(req.body);
-  // Simple validation if check if the fields are not empty
+
   if (!companyName || !categories || !logoUrl || !productLink || !description) {
     return res.status(400).json({ message: "All fields are required." });
   }
@@ -274,8 +272,6 @@ app.post("/getproducts/:sortBy", bodyParser.json(), async (req, res) => {
       }
     }
 
-    // result = productQuery.sort({ upvotes: -1 });
-
     return res.status(201).json({ products: sortedProducts });
   } catch (error) {
     console.log(error);
@@ -295,6 +291,7 @@ app.get("/getproduct/:id", bodyParser.json(), async (req, res) => {
   }
 });
 
+// add comment
 app.put("/addcomment/:id", bodyParser.json(), async (req, res) => {
   const { comment } = req.body;
   try {
@@ -309,7 +306,7 @@ app.put("/addcomment/:id", bodyParser.json(), async (req, res) => {
   }
 });
 
-// Icrement Upvotes
+// Increment Upvotes
 app.put("/incrementupvotes/:id", async (req, res) => {
   try {
     let doc = await product.findOneAndUpdate(

@@ -12,7 +12,7 @@ export const LoginUser = (e, email, password) => {
     },
   })
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       const userD = {
         user: res.data.user,
         authToken: res.data.token,

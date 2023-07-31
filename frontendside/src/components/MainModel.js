@@ -1,20 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import passwordIcon from "../images/password.svg";
-import emailIcon from "../images/email.svg";
-import userIcon from "../images/user.svg";
-import mobileIcon from "../images/mobile.svg";
 import LoginModel from "./LoginModel";
 import SignupModal from "./SignupModal";
 import AddProductModel from "./AddProductModel";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MainModel(props) {
   console.log("I am edit ", props.edit);
   return (
     <div className="mainModalOverlay">
-      {/* <ToastContainer /> */}
       <div
         className="bg-overlay"
         onClick={() => {
@@ -39,7 +32,6 @@ function MainModel(props) {
           ) : (
             ""
           )}
-          {/* companyName, categories, description, logoUrl, productLink */}
           {props.modalType === "addProduct" ? (
             <AddProductModel editDetails={props.editDetails} />
           ) : (

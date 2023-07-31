@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./loginSignup.css";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import passwordIcon from "../images/password.svg";
 import emailIcon from "../images/email.svg";
@@ -10,31 +9,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // const LoginUser = (e) => {
-  //   e.preventDefault();
-  //   let resp = axios({
-  //     method: "post",
-  //     url: "http://localhost:5000/login",
-  //     data: {
-  //       email: email,
-  //       password: password,
-  //     },
-  //   })
-  //     .then((res) => {
-  //       console.log(res);
-  //       const userD = {
-  //         user: res.data.user,
-  //         authToken: res.data.token,
-  //       };
-  //       localStorage.setItem("userData", JSON.stringify(userD));
-  //       // toast("Logged In Successfully.");
-  //       navigate("/");
-  //     })
-  //     .catch((err) => alert(err.response.data.message));
-  //   console.log(resp);
-  // };
-
-  // console.log("Login function ", LoginUser);
 
   return (
     <div id="loginPage" className="primary-bg">
