@@ -5,7 +5,7 @@ export const LoginUser = (e, email, password) => {
   e.preventDefault();
   return axios({
     method: "post",
-    url: "http://localhost:5000/login",
+    url: "https://project-listing-api.vercel.app/login",
     data: {
       email: email,
       password: password,
