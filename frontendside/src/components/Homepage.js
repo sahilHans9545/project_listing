@@ -58,7 +58,7 @@ function Homepage() {
 
   const getProducts = () => {
     axios
-      .post(`http://localhost:5000/getproducts/${sortBy.toLowerCase()}`, {
+      .post(`https://project-listing-api.vercel.app/getproducts/${sortBy.toLowerCase()}`, {
         selectedCategories: selectedCategories,
       })
       .then((response) => {
@@ -87,7 +87,7 @@ function Homepage() {
     try {
       const result = await axios({
         method: "put",
-        url: `http://localhost:5000/addcomment/${productId}`,
+        url: `https://project-listing-api.vercel.app/addcomment/${productId}`,
         data: {
           comment: text.value,
         },
@@ -116,7 +116,7 @@ function Homepage() {
     try {
       await axios({
         method: "put",
-        url: `http://localhost:5000/incrementupvotes/${productId}`,
+        url: `https://project-listing-api.vercel.app/incrementupvotes/${productId}`,
       });
 
       let productsDummy = products;
@@ -272,6 +272,7 @@ function Homepage() {
             <p>Filters:</p>
             <div className="filters">
               <span
+<<<<<<< HEAD
                 className={
                   selectedCategories.includes("All") ? "activeFilter" : ""
                 }
@@ -290,6 +291,26 @@ function Homepage() {
                   {category}
                 </span>
               ))}
+=======
+              className={
+                selectedCategories.includes("All") ? "activeFilter" : ""
+              }
+              onClick={(e) => handleFilterClick(e, "All")}
+            >
+              All
+            </span>
+            {filterOptions.map((category) => (
+              <span
+                key={category}
+                className={
+                  selectedCategories.includes(category) ? "activeFilter" : ""
+                }
+                onClick={(e) => handleFilterClick(e, category)}
+              >
+                {category}
+              </span>
+            ))}
+>>>>>>> 5f7e09fc1fb393249040b20a9abbc57c01edbdb1
             </div>
           </div>
           <div className="Projects">

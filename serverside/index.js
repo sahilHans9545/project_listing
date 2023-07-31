@@ -8,7 +8,6 @@ const auth = require("./auth");
 
 bodyParser = require("body-parser");
 const app = express();
-dotenv.config();
 
 app.use(
   cors({
@@ -17,6 +16,8 @@ app.use(
     credentials: true,
   })
 );
+
+dotenv.config();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -140,11 +141,6 @@ app.post("/signup", bodyParser.json(), async (req, res) => {
     console.log(error);
     return res.status(500).json({ message: "Something went wrong !" });
   }
-});
-
-// private applyFilter
-app.get("/private", auth, (req, res) => {
-  res.status(201).json({ msg: "Right code" });
 });
 
 // **** login ******
