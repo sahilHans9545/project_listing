@@ -290,13 +290,25 @@ function Homepage() {
           <div className=" mobile-filters">
             <p>Filters:</p>
             <div className="filters">
-              <span className="activeFilter">All</span>
-              <span>Fintech</span>
-              <span>Edtech</span>
-              <span>B2B</span>
-              <span>SaaS</span>
-              <span>Agritech</span>
-              <span>Medtech</span>
+              <span
+              className={
+                selectedCategories.includes("All") ? "activeFilter" : ""
+              }
+              onClick={(e) => handleFilterClick(e, "All")}
+            >
+              All
+            </span>
+            {filterOptions.map((category) => (
+              <span
+                key={category}
+                className={
+                  selectedCategories.includes(category) ? "activeFilter" : ""
+                }
+                onClick={(e) => handleFilterClick(e, category)}
+              >
+                {category}
+              </span>
+            ))}
             </div>
           </div>
           <div className="Projects">
