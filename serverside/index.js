@@ -10,13 +10,15 @@ bodyParser = require("body-parser");
 const app = express();
 
 
-app.use(cors(
-  {
-    origin: ["https://project-listing-site.vercel.app"],
-    methods:["POST","GET","PUT"],
-    credentials : true
-  } 
-));
+// app.use(cors(
+//   {
+//     origin: ["https://project-listing-site.vercel.app"],
+//     methods:["POST","GET","PUT"],
+//     credentials : true
+//   } 
+// ));
+
+app.use(cors());
 dotenv.config();
 app.use(express.json());
 app.use(bodyParser.json());
