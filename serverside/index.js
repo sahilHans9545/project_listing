@@ -11,9 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://project-listing-site.vercel.app/"],
-    methods: ["POST", "GET", "PUT"],
-    credentials: true,
+    origin: "https://project-listing-wzdv.onrender.com",
   })
 );
 
