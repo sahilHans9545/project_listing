@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.primary-color{
+  color: #36416A;
+}
+
+.primary-bg{
+  background:#36416A;
+}
+
+#homePage{
+   width: 100%;
+   min-height: 100vh;
+   
+}
+
+
+
+.bodyModalOpen{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-overlay {
+  background: rgba(47, 47, 47, .75);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#mainModal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 850px;
+  max-height: 100vh;
+  min-height: 450px;
+  overflow: auto;
+  background-color: #ffffff;
+  display: flex;
+  z-index: 3;
+}
+
+.modalLeft{ 
+  width: 60%;
+  padding-top: 100px;
+  padding: 0 3rem 0 3.5rem;
+}
+
+#loginModal{
+  padding-top: 100px;
+  padding-bottom: 100px ;
+}
+
+#signUpModal,#addproductModal{
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+#signUpModal .inputField,#addproductModal .inputField{
+  margin-top: 2rem;
+}
+
+.modalLeft .modalHead{
+  color: #000;
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+}
+#signUpModal .modalHead,#addproductModal .modalHead{
+  margin-bottom: 1.8rem;
+}
+
+.modalLeft .inputField input{
+  font-size: 1.07rem;
+}
+
+.modalLeft a{
+  padding-left: 5px;
+}
+
+.modalRight{
+  width: 40%;
+  background: #36416A;
+  color: #fff;
+  padding: 2.2rem 1.7rem;
+}
+
+.modalRight h1{
+  font-size: 40px;
+}
+
+.modalRight p{
+    font-size: 30.212px;
+    font-weight: 400;
+    width: 65%;
+    margin-top: 1.15rem
+}
+
+.flexJusBet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dflex{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width:880px){
+  #mainModal {
+      
+    width: 510px;
+    max-width: 85%;
+    min-height: unset;
+    background-color: #ffffff;
+    display: flex;
+    z-index: 3;
+    border-radius: 10px;
+  }
+
+  .modalLeft {
+    width: 100%;
+    padding-top: 100px;
+    padding: 0 3rem 0 3.5rem;
+  }
+
+  .modalRight{
+    display: none;
+  }
+}
+
+@media screen and (max-width:576px){
+  .modalLeft {
+    width: 100%;
+    padding-top: 100px;
+    padding: 0 2.1rem 0 2.1rem;
+  }
+
+  #signUpModal,
+  #addproductModal {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  #loginModal {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  #loginModal .modalHead, #signUpModal .modalHead{
+    display: none;
+  }
+
+  .modalLeft .modalHead{
+    font-size: 1.7rem;
+  }
+
+  .modalSubmitBtnBox{
+    text-align: center;
+  }
+  .modalSubmitBtnBox button{
+    width: 85%;
+    padding: 9px 20px;
+  }
+
+  .modalLeft a{
+    padding-left: 0%;
+    display: block;
+  }
+}

@@ -1,0 +1,666 @@
+header{
+    color: #FFF;
+    padding: 12px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.header-btns{
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.header-btns a{
+    color: #FFF;
+    text-decoration: none;
+    padding: 3px 15px;
+}
+
+#signup{
+    border-radius: 8px;
+    border: 1.7px solid #FFF;
+}
+
+
+/* homeBanner */
+.homeBanner{
+    display: flex;
+    align-items: center;
+    padding: 50px 2rem;padding-right: 3.6rem;
+}
+.homeBanner .banner-left{
+    width: 42%;
+}
+
+.banner-left img{
+    max-width: 100%;
+}
+
+.homeBanner .banner-right{
+    width: 58%;
+}
+
+.bannerHead{
+    color: #000;
+    font-size: 55.513px;
+    font-weight: 500;
+    line-height: 147.2%;
+    margin-top: 3rem;
+}
+
+.banner-right p{
+    color: #6A6A6A;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 85%;
+}
+
+.mainHomeSection{
+    padding: 0 2rem;
+    padding-bottom: 70px;
+    display: flex;
+    gap: 20px;
+}
+
+.filters-side{
+    width: 280px;
+}
+
+.applyFilter h3{
+        font-size: 33.587px;
+        font-weight: 500;
+}
+
+.applyFilter{
+    color: #FFF;
+    padding: 40px 30px 16px 30px;
+    border-radius: 15px;
+}
+
+
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 11.378px;
+    background: #FFF;
+    box-shadow: 0px 0px 17.505004px 0px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    margin-top: 26px;
+}
+
+.filters span{
+    border-radius: 25.043px;
+    background: rgba(54, 65, 106, 0.15);
+    padding: 5px 25px;
+}
+.filters .activeFilter{
+    color: #FFF;
+    background: #36416A;
+}
+
+.suggestedProjects{
+    width: calc(100% - 280px);
+}
+
+.suggestedProjects .project{
+    margin-top: 25px;
+    border-radius: 4px;
+    background: rgba(54, 65, 106, 0.15);
+    padding: 20px 35px 17px 25px;
+}
+
+.projectLogo{
+    width: 70px;
+    height: 70px;
+    /* border-radius: 50%; */
+}
+
+.project .upvotes{
+    display: flex;
+    flex-direction: column;
+    border-radius: 12.984px;
+    background: #C7CBD6;
+    padding: 5px 8px;
+    align-self: flex-start;
+}
+
+ .upvotes img{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+ }
+
+.project #comments{
+    display: flex;
+    align-items: center;
+    gap: 3.5px;
+    font-size: 1.2rem;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.project .projectTags{ 
+    display: flex;
+    gap: 1.3rem;
+    padding-left: 94px;
+    
+}
+.mobile-filters{
+    display: none;
+}
+
+.projectNameBox{
+    padding-left: 25px;
+    padding-top: 4px;
+}
+
+.projectNameBox p{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.project .projectName{
+    font-size: 28.396px;
+    font-weight: 700;
+}
+
+.projectTags span{
+    border-radius: 20.94px;
+    background: #C0CEFF;
+    padding: 3.5px 25px;
+}
+
+.project .addComment{
+    margin-left: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #ABABAB;
+    cursor: pointer;
+}
+
+#addProductBtn{
+    border-radius: 7px;
+    background: #36416A;
+    color: #FFF;
+    padding: 7px 30px;
+    border: none;
+    margin-left: auto;
+}
+
+.addProductBox{
+    border-radius: 8px;
+    border: 3px solid rgba(54, 65, 106, 0.35);
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 7px 12px 7px 34px;
+    gap: 4.8rem;
+}
+
+.addProductBox p{
+    display: flex;
+    align-items: center;
+}
+
+.addProductBox>span:nth-child(1),.sortBy span:nth-child(2){
+    font-weight: 700;
+}
+
+.commentInput{
+    margin-top: 20px;
+    position: relative;
+}
+
+.commentInput img{
+    top: 6.5px;
+    position: absolute;
+    right: 18px;
+}
+
+.commentInput input{
+    border-radius: 43px;
+    border: 3px solid #C7CBD6;
+    background: #FFF;
+    width: 100%;
+    padding: 13px 35px;
+}
+
+.user-comments{
+    margin-top: 1rem;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.user-comments .comment{
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.user-comments .comment .listDot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    top: 6px;
+}
+
+.user-comments::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.user-comments::-webkit-scrollbar {
+    width: 15px;
+}
+
+.user-comments::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #C7CBD6;
+}
+
+.user-comments .comment p{
+    color: #999;
+}
+
+.editBtn{
+    color: #fff;
+    padding: 5px 28px;
+    /* font-size: 22px; */
+    font-weight: 500;
+    border-radius: 29px;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.sortFilters{
+    background: white;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 130%;
+}
+
+.sortFilters div{
+    cursor: pointer;
+    padding: 5px 20px;
+    font-size: medium;
+    font-weight: 500;
+    border: 1px solid #bfbfbf;
+}
+
+.sortByValue{
+    font-weight: 700;
+}
+
+.filters span{
+    cursor: pointer;
+}
+
+@media screen and (max-width:964px) {
+
+    .homeBanner {
+        padding: 50px 1.1rem  ;
+        padding-right: 1.4rem ;
+    }
+
+    .bannerHead {
+        color: #000;
+        font-size: 30.513px;
+    }
+    
+    .banner-right p {
+        color: #6A6A6A;
+        font-size: 16px;
+    }
+
+    .project #comments{
+        padding-left: 10px;
+    }
+}
+
+
+
+@media screen and (max-width:1000px) {
+    #addProductBtn {
+            padding: 7px 14px;
+        }
+
+    .addProductBox * {
+        flex-shrink: 0;
+    }
+
+
+        .mainHomeSection {
+            flex-direction: column;
+            padding: 0 1rem;
+            padding-bottom: 50px;
+        }
+    
+        .applyFilter {
+            display: none;
+        }
+    
+        .filters-side,
+        .suggestedProjects {
+            width: 100%;
+        }
+    
+        .suggestedProjects .project {
+            margin-top: 25px;
+            border-radius: 4px;
+            background: rgba(54, 65, 106, 0.15);
+            padding: 20px 15px 17px 15px;
+        }
+    
+        
+    
+        .project .projectName {
+            font-size: 22.396px;
+            font-weight: 700;
+        }
+    
+        .projectNameBox p {
+            font-size: 15px;
+        }
+    
+        .project .flexJusBet {
+            gap: 15px;
+        }
+    
+        
+    
+        .addProductBox {
+            padding: 4px 5px 4px 14px;
+        }
+    
+        .sortBy {
+            padding: 0 8px 0 14px;
+        }
+    
+    
+    
+        #addProductBtn {
+            padding: 7px 14px;
+        }
+    
+        .desktop-filters {
+            display: none;
+        }
+    
+        .mobile-filters p {
+            color: #8B8B8B;
+            font-size: 16.618px;
+            font-weight: 400;
+            margin-top: 25px;
+            padding-left: 5px;
+        }
+    
+        .mobile-filters {
+            display: block;
+        }
+    
+        .mobile-filters .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            border-radius: 11.378px;
+            background: #FFF;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+            padding: 0px;
+            margin-top: 2px;
+        }
+    
+        .filters span {
+            margin-top: 6.5px;
+            padding: 5px 20px;
+        }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:650px) {
+
+    header {
+        padding: 12px 25px;
+        padding-right: 12px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .header-btns {
+        gap: 0rem;
+    }
+
+    .header-btns a {
+        padding: 3px 15px;
+    }
+
+    .homeBanner {
+        flex-direction: column;
+        padding-top: 0%;
+        padding-bottom: 30px;
+    }
+
+    .homeBanner .banner-left {
+        width: 100%;
+    }
+
+    .homeBanner .banner-right {
+        width: 100%;
+    }
+
+    .bannerHead {
+        margin-top: 0%;
+        font-size: 21px;
+    }
+
+    .banner-right p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .mainHomeSection {
+        flex-direction: column;
+        padding: 0 1rem;
+        padding-bottom: 50px;
+    }
+
+    .applyFilter {
+        display: none;
+    }
+
+    .filters-side,
+    .suggestedProjects {
+        width: 100%;
+    }
+
+    .suggestedProjects .project {
+        margin-top: 25px;
+        border-radius: 4px;
+        background: rgba(54, 65, 106, 0.15);
+        padding: 20px 8px 17px 8px;
+    }
+
+    .projectLogo {
+        width: 55px;
+        height: 55px;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .projectNameBox {
+        padding-left: 12px;
+        padding-top: 4px;
+    }
+
+    .project .projectTags {
+        gap: 0.5rem;
+        padding-left: 58px;
+        flex-wrap: wrap;
+    }
+
+    .projectTags span {
+        border-radius: 20.94px;
+        background: #C0CEFF;
+        padding: 3.5px 10px;
+    }
+
+    .project .addComment {
+        margin-left: 5px;
+    }
+
+    .addComment .comment {
+        display: none;
+    }
+
+    .project .projectName {
+        font-size: 22.396px;
+        font-weight: 700;
+    }
+
+    .projectNameBox p {
+        font-size: 15px;
+    }
+
+    .project .flexJusBet {
+        gap: 10px;
+    }
+
+    .project .upvotes {
+        border-radius: 15.984px;
+        background: #C7CBD6;
+        padding: 6px 8px;
+        gap: 8px;
+        align-self: flex-start;
+    }
+
+    .addProductBox {
+        font-size: 13px;
+        padding: 4px 5px 4px 14px;
+        gap: 0;
+    }
+
+    .sortBy {
+        padding: 0 8px 0 14px;
+    }
+
+
+
+    #addProductBtn {
+        padding: 7px 14px;
+    }
+
+    .sortByValue,
+    .desktop-filters {
+        display: none;
+    }
+
+    .mobile-filters p {
+        color: #8B8B8B;
+        font-size: 16.618px;
+        font-weight: 400;
+        margin-top: 25px;
+        padding-left: 5px;
+    }
+
+    .mobile-filters {
+        display: block;
+    }
+
+    .mobile-filters .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        border-radius: 11.378px;
+        background: #FFF;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+        padding: 0px;
+        margin-top: 2px;
+    }
+
+    .filters span {
+        margin-top: 6.5px;
+        padding: 5px 20px;
+    }
+
+    .user-comments .comment {
+        padding: 12px;
+        gap: 1rem;
+    }
+
+    .commentInput {
+        padding: 0 10px;
+    }
+
+    .commentInput input {
+        border-radius: 43px;
+        border: 3px solid #C7CBD6;
+        background: #FFF;
+        width: 100%;
+        padding: 8px 25px;
+        font-size: large;
+    }
+
+    .commentInput img {
+        top: 8.5px;
+        position: absolute;
+        width: 25px;
+        right: 21px;
+    }
+
+    .user-comments {
+        max-height: 156px;
+    }
+
+    .editBtn {
+        padding: 5px 18px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .projectTags span{
+        font-size: 12px;
+    }
+
+    .addComment img{
+        width: 23px;
+        height: 23px;
+    }
+
+    .editBtn{
+        padding: 3px 18px;
+    }
+    #comments{
+        font-size: 16px;
+    }
+    #comments svg{
+        width: 20px;
+        height: 20px;
+    }
+}

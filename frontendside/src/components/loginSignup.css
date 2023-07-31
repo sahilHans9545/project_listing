@@ -1,0 +1,132 @@
+.custom-mt-1rem{
+    margin-top: 1rem;
+}
+
+
+#loginPage,#signupPage{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    color: #737373;
+}
+
+.top-head{
+    color: #fff;
+    padding: 1rem 2rem 2.2rem 3rem;
+}
+
+.top-head h1{
+    font-size: 3.4rem;
+    font-weight: 500;
+}
+
+.top-head p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 0.5rem;
+}
+
+.loginSignupBox{
+    min-height: 300px;
+    width: 650px;
+    max-width: 90vw;
+    border-radius: 33px;
+    background: #FFF;
+    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.25);
+    padding: 2.4rem 4rem 2rem 4rem;
+}
+
+
+#signupPage .loginSignupBox{
+    padding: 1.3rem 4rem 1rem 3.3rem;
+}
+
+#signupPage  .inputField {
+    margin-top: 2rem;
+}
+.blueBtnBox{
+    text-align: end;
+}
+.blueButton{
+    border-radius: 27.907px;
+    width: 130px;
+    padding: 8.2px 20px;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+ .inputField{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+ .inputField img{
+    width: 26px;
+}
+
+ .inputField input{
+    border: none;
+    border-bottom: 1px solid #AAA;
+    width: 100%;
+    color: #737373;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 11px;
+    padding-bottom: 3px;
+    outline: none;
+}
+
+.linkBox{
+    margin-top: 1.4rem;
+    font-size: 1.1rem;
+}
+
+#loginPage a,#signupPage a{
+    padding-left: 5px;
+    font-weight: 500;
+}
+
+@media screen and (max-width:576px) {
+    .loginSignupBox {
+        max-width: 90vw;
+        width: 76vw;
+        border-radius: 10px;
+        padding: 45px 28px 24px 28px;
+        margin: auto;
+    }
+
+    #signupPage .loginSignupBox {
+        padding: 30px 28px 24px 28px;
+    }
+    .blueBtnBox{
+        text-align: center;
+        margin-top: 1.45rem !important;
+    }
+    .blueButton{
+        width: 94%;
+        padding: 7px 20px;
+    }
+
+    .top-head {
+        padding: 1rem 2rem 4.2rem 3rem;
+    }
+
+    .top-head p {
+        padding-top: 1.5rem;
+    }
+
+    .linkBox{
+        margin-top: 2.5rem;
+    }
+    #loginPage a,
+    #signupPage a {
+        padding-left: 0%;
+        display: block;
+    }
+}
