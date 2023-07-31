@@ -4,20 +4,19 @@ const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const { cache } = require("ejs");
 const auth = require("./auth");
 
 bodyParser = require("body-parser");
 const app = express();
 dotenv.config();
 
-app.use(cors(
-  {
-    origin : [""],
-    methods:["POST","GET","PUT"],
-    credentials : true
-  } 
-));
+app.use(
+  cors({
+    origin: ["https://project-listing-site.vercel.app/"],
+    methods: ["POST", "GET", "PUT"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

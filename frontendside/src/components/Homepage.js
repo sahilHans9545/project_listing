@@ -205,25 +205,6 @@ function Homepage() {
             <p style={{ fontWeight: "700" }}>Apply Filter</p>
           </div>
           <div className="filters desktop-filters">
-            {/* <span
-              className="activeFilter"
-              onClick={(e) => handleFilterClick(e, "All")}
-            >
-              All
-            </span>
-
-            <span onClick={(e) => handleFilterClick(e, "Fintech")}>
-              Fintech
-            </span>
-            <span onClick={(e) => handleFilterClick(e, "Edtech")}>Edtech</span>
-            <span onClick={(e) => handleFilterClick(e, "B2B")}>B2B</span>
-            <span onClick={(e) => handleFilterClick(e, "SaaS")}>SaaS</span>
-            <span onClick={(e) => handleFilterClick(e, "Agritech")}>
-              Agritech
-            </span>
-            <span onClick={(e) => handleFilterClick(e, "Medtech")}>
-              Medtech
-            </span> */}
             <span
               className={
                 selectedCategories.includes("All") ? "activeFilter" : ""
@@ -290,13 +271,25 @@ function Homepage() {
           <div className=" mobile-filters">
             <p>Filters:</p>
             <div className="filters">
-              <span className="activeFilter">All</span>
-              <span>Fintech</span>
-              <span>Edtech</span>
-              <span>B2B</span>
-              <span>SaaS</span>
-              <span>Agritech</span>
-              <span>Medtech</span>
+              <span
+                className={
+                  selectedCategories.includes("All") ? "activeFilter" : ""
+                }
+                onClick={(e) => handleFilterClick(e, "All")}
+              >
+                All
+              </span>
+              {filterOptions.map((category) => (
+                <span
+                  key={category}
+                  className={
+                    selectedCategories.includes(category) ? "activeFilter" : ""
+                  }
+                  onClick={(e) => handleFilterClick(e, category)}
+                >
+                  {category}
+                </span>
+              ))}
             </div>
           </div>
           <div className="Projects">
