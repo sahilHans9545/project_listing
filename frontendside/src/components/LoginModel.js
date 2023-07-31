@@ -3,7 +3,6 @@ import passwordIcon from "../images/password.svg";
 import emailIcon from "../images/email.svg";
 import { Link } from "react-router-dom";
 import { LoginUser } from "../apicalls/Login_api";
-import { validateLoginForm } from "./validation";
 
 function LoginModel(props) {
   const [email, setEmail] = useState("");
@@ -16,19 +15,18 @@ function LoginModel(props) {
         action=""
         onSubmit={async (e) => {
           e.preventDefault();
-          if (validateLoginForm(email, password)) {
-            LoginUser(e, email, password)
-              .then((loginResult) => {
-                if (loginResult === true) {
-                  alert("Login successful!");
-                  props.setModalType("addProduct");
-                  props.setIsLoggedIn(true);
-                }
-              })
-              .catch((error) => {
-                console.error("Error during login:", error);
-              });
-          }
+
+          LoginUser(e, email, password)
+            .then((loginResult) => {
+              if (loginResult === true) {
+                alert("Login successful!");
+                props.setModalType("addProduct");
+                props.setIsLoggedIn(true);
+              }
+            })
+            .catch((error) => {
+              console.error("Error during login:", error);
+            });
         }}
       >
         <div className="inputField">

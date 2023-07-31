@@ -45,7 +45,7 @@ function Homepage() {
     // Function to check if the user is logged in
     const checkLoggedIn = () => {
       const authToken = JSON.parse(localStorage.getItem("userData"));
-      console.log("authToken ", authToken);
+      // console.log("authToken ", authToken);
       if (authToken) {
         setUser(JSON.parse(localStorage.getItem("userData")).user);
       }
@@ -65,9 +65,9 @@ function Homepage() {
         }
       )
       .then((response) => {
-        console.log(response.status);
+        // console.log(response.status);
         if (response.status === 201) {
-          console.log("response is ", response.data.products);
+          // console.log("response is ", response.data.products);
           setProducts(response.data.products);
         }
       });
@@ -96,7 +96,7 @@ function Homepage() {
         },
       });
 
-      console.log("result is ", result);
+      // console.log("result is ", result);
     } catch (err) {
       console.log(err);
     }
