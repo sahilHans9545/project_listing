@@ -302,7 +302,11 @@ function Homepage() {
                   <div className="project">
                     <div className="flexJusBet">
                       <div className="dflex">
-                        <img src={companyLogo} alt="" className="projectLogo" />
+                        <img
+                          src={product.logoUrl}
+                          alt=""
+                          className="projectLogo"
+                        />
                         <div className="projectNameBox">
                           <div className="projectName primary-color">
                             {product.companyName}
