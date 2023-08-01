@@ -277,6 +277,14 @@ header{
     color: #999;
 }
 
+.noProductFound{
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
 .editBtn{
     color: #fff;
     padding: 5px 28px;
@@ -334,6 +342,10 @@ button{
     .project #comments{
         padding-left: 10px;
     }
+
+    .noProductFound {
+        font-size: 3rem;
+    }    
 }
 
 
@@ -663,4 +675,7 @@ button{
         width: 20px;
         height: 20px;
     }
+    .noProductFound {
+        font-size: 2.5rem;
+    }   
 }

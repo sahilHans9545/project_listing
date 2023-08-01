@@ -295,6 +295,9 @@ function Homepage() {
             </div>
           </div>
           <div className="Projects">
+            {!products.length && (
+              <div className="noProductFound">No Products Found.</div>
+            )}
             {products &&
               products.map((product) => {
                 return (
@@ -406,140 +409,6 @@ function Homepage() {
                   </div>
                 );
               })}
-
-            {/* <div className="project">
-              <div className="flexJusBet">
-                <div className="dflex">
-                  <img src={companyLogo} alt="" className="projectLogo" />
-                  <div className="projectNameBox">
-                    <div className="projectName primary-color">Apna Godam</div>
-                    <p className="projectDesc">
-                      Provide warehouse and loan service to farmers and small
-                      traders
-                    </p>
-                  </div>
-                </div>
-                <div className="upvotes">
-                  <img src={upArrowIcon} alt="" />
-                  <span>70</span>
-                </div>
-              </div>
-              <div className="flexJusBet">
-                <div className="dflex">
-                  <div className="projectTags">
-                    <span>Agritech</span>
-                  </div>
-                  <div className="addComment">
-                    <img src={commentIcon} alt="" />
-                    <div className="comment">Comment</div>
-                  </div>
-                </div>
-                <div id="comments">
-                  <span>10</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                  >
-                    <path
-                      d="M23.6833 23.6833L20.9999 21H4.66659C4.02492 21 3.47542 20.7713 3.01809 20.314C2.56075 19.8566 2.33248 19.3075 2.33325 18.6666V4.66665C2.33325 4.02498 2.56192 3.47548 3.01925 3.01815C3.47659 2.56081 4.0257 2.33254 4.66659 2.33331H23.3333C23.9749 2.33331 24.5244 2.56198 24.9818 3.01932C25.4391 3.47665 25.6674 4.02576 25.6666 4.66665V22.8375C25.6666 23.3625 25.4282 23.7273 24.9514 23.9318C24.4746 24.1364 24.0519 24.0535 23.6833 23.6833Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div className="project">
-              <div className="flexJusBet">
-                <div className="dflex">
-                  <img src={companyLogo} alt="" className="projectLogo" />
-                  <div className="projectNameBox">
-                    <div className="projectName primary-color">
-                      Meditech India
-                    </div>
-                    <p className="projectDesc">
-                      Fast and secure delivery of machine
-                    </p>
-                  </div>
-                </div>
-                <div className="upvotes">
-                  <img src={upArrowIcon} alt="" />
-                  <span>10</span>
-                </div>
-              </div>
-              <div className="flexJusBet">
-                <div className="dflex">
-                  <div className="projectTags">
-                    <span>Meditech</span>
-                  </div>
-                  <div className="addComment">
-                    <img src={commentIcon} alt="" />
-                    <div className="comment">Comment</div>
-                  </div>
-                </div>
-                <div id="comments">
-                  <span>2</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                  >
-                    <path
-                      d="M23.6833 23.6833L20.9999 21H4.66659C4.02492 21 3.47542 20.7713 3.01809 20.314C2.56075 19.8566 2.33248 19.3075 2.33325 18.6666V4.66665C2.33325 4.02498 2.56192 3.47548 3.01925 3.01815C3.47659 2.56081 4.0257 2.33254 4.66659 2.33331H23.3333C23.9749 2.33331 24.5244 2.56198 24.9818 3.01932C25.4391 3.47665 25.6674 4.02576 25.6666 4.66665V22.8375C25.6666 23.3625 25.4282 23.7273 24.9514 23.9318C24.4746 24.1364 24.0519 24.0535 23.6833 23.6833Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div className="project">
-              <div className="flexJusBet">
-                <div className="dflex">
-                  <img src={companyLogo} alt="" className="projectLogo" />
-                  <div className="projectNameBox">
-                    <div className="projectName primary-color">Razorpay</div>
-                    <p className="projectDesc">Pay securely</p>
-                  </div>
-                </div>
-                <div className="upvotes">
-                  <img src={upArrowIcon} alt="" />
-                  <span>120</span>
-                </div>
-              </div>
-              <div className="flexJusBet">
-                <div className="dflex">
-                  <div className="projectTags">
-                    <span>Fintech</span>
-                    <span>B2B</span>
-                  </div>
-                  <div className="addComment">
-                    <img src={commentIcon} alt="" />
-                    <div className="comment">Comment</div>
-                  </div>
-                </div>
-                <div id="comments">
-                  <span>30</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                  >
-                    <path
-                      d="M23.6833 23.6833L20.9999 21H4.66659C4.02492 21 3.47542 20.7713 3.01809 20.314C2.56075 19.8566 2.33248 19.3075 2.33325 18.6666V4.66665C2.33325 4.02498 2.56192 3.47548 3.01925 3.01815C3.47659 2.56081 4.0257 2.33254 4.66659 2.33331H23.3333C23.9749 2.33331 24.5244 2.56198 24.9818 3.01932C25.4391 3.47665 25.6674 4.02576 25.6666 4.66665V22.8375C25.6666 23.3625 25.4282 23.7273 24.9514 23.9318C24.4746 24.1364 24.0519 24.0535 23.6833 23.6833Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
