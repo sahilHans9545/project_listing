@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MainModel from "./MainModel";
 import "./homepage.css";
-import companyLogo from "../images/companyLogo.png";
 import commentIcon from "../images/comment.svg";
 import upArrowIcon from "../images/upArrow.svg";
 import EnterIcon from "../images/EnterIcon.svg";
