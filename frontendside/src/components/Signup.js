@@ -81,7 +81,7 @@ function Signup() {
             </div>
             <div className="linkBox">
               Already have an account?
-              <Link to="/" className="primary-color">
+              <Link to="/login" className="primary-color">
                 Log in
               </Link>
             </div>
