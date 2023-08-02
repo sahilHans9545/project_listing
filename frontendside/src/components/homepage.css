@@ -325,6 +325,15 @@ button{
     text-align: center;
 }
 
+.products-loader{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.products-loader img{
+    width: 50px;
+}
+
 @media screen and (max-width:964px) {
 
     .homeBanner {

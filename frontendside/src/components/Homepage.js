@@ -4,6 +4,7 @@ import "./homepage.css";
 import commentIcon from "../images/comment.svg";
 import upArrowIcon from "../images/upArrow.svg";
 import EnterIcon from "../images/EnterIcon.svg";
+import Loader from "../images/loader.svg";
 import HomeBanner from "./HomeBanner";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -17,6 +18,7 @@ function Homepage() {
   const [sortBy, setSortBy] = useState("Upvotes");
   const [selectSortBy, setSelectSortBy] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState(["All"]);
+  const [loading, setLoading] = useState(true);
   const [editDetails, setEditDetails] = useState({
     edit: false,
     productId: "",
@@ -56,6 +58,7 @@ function Homepage() {
   }, [sortBy, selectedCategories]);
 
   const getProducts = () => {
+    setLoading(true);
     axios
       .post(
         `https://project-listing-backend-v0lp.onrender.com/getproducts/${sortBy.toLowerCase()}`,
@@ -67,9 +70,11 @@ function Homepage() {
         // console.log(response.status);
         if (response.status === 201) {
           // console.log("response is ", response.data.products);
+          setLoading(false);
           setProducts(response.data.products);
         }
-      });
+      })
+      .catch((e) => setLoading(false));
   };
 
   const handleDisplayComments = (id) => {
@@ -295,8 +300,14 @@ function Homepage() {
             </div>
           </div>
           <div className="Projects">
-            {!products.length && (
+            {!products.length && !loading && (
               <div className="noProductFound">No Products Found.</div>
+            )}
+
+            {loading && (
+              <div className="products-loader">
+                <img src={Loader} alt="" />
+              </div>
             )}
             {products &&
               products.map((product) => {
