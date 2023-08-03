@@ -58,7 +58,8 @@ function AddProductModel(props) {
         setProductLink("");
         setCategories("");
         toast.success("Product added Succesfully");
-        props.getProducts();
+        // props.getProducts();
+        props.setProducts((current) => [...current, msg.data.product]);
         return true;
       })
       .catch((err) => {
