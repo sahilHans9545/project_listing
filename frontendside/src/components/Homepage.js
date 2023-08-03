@@ -177,6 +177,8 @@ function Homepage() {
           setModalType={setModalType}
           setIsLoggedIn={setIsLoggedIn}
           editDetails={{ ...editDetails, setEditDetails, setShowModal }}
+          setProducts={setProducts}
+          getProducts={getProducts}
         />
       )}
       <header className="primary-bg">

@@ -33,7 +33,11 @@ function MainModel(props) {
             ""
           )}
           {props.modalType === "addProduct" ? (
-            <AddProductModel editDetails={props.editDetails} />
+            <AddProductModel
+              editDetails={props.editDetails}
+              setProducts={props.setProducts}
+              getProducts={props.getProducts}
+            />
           ) : (
             ""
           )}

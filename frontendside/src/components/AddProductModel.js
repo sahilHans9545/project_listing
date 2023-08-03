@@ -58,6 +58,7 @@ function AddProductModel(props) {
         setProductLink("");
         setCategories("");
         toast.success("Product added Succesfully");
+        props.getProducts();
         return true;
       })
       .catch((err) => {
@@ -88,6 +89,7 @@ function AddProductModel(props) {
         alert("Product Updated Succesfully");
         props.editDetails.setEditDetails({ edit: false, productId: "" });
         props.editDetails.setShowModal(false);
+        props.getProducts();
         return true;
       })
       .catch((err) => {
