@@ -3,6 +3,7 @@ const router = express.Router();
 const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const user = require("./models/user");
 
 // **** login ******
 
@@ -48,7 +49,7 @@ router.post("/login", bodyParser.json(), async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    return res.status(500).json({ message: "Something gadbad went wrong !" });
+    return res.status(500).json({ message: "Something went wrong !" });
   }
 });
 
