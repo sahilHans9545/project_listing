@@ -140,6 +140,7 @@ app.post("/signup", bodyParser.json(), async (req, res) => {
   }
 });
 
+// const signupRoute = require("./routes/signupRoute");
 const loginRoute = require("./routes/loginRoute");
 
 // Use route files
