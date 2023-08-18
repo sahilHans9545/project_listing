@@ -4,8 +4,8 @@ const dotenv = require("dotenv");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const auth = require("../auth");
-const user = require("./models/user");
-const product = require("./models/product");
+const user = require("../models/user");
+const product = require("../models/product");
 const router = express.Router();
 
 // Add product applyFilter
